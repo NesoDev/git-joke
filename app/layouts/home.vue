@@ -85,7 +85,7 @@ a.router-link-active {
 a h2 {
     margin: 0;
     font-family: "SF Pro Text", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     transition: color 0.15s ease;
 }

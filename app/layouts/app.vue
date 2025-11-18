@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="app-footer__copyright">
-                <h4 class="app-footer__copyright__text">Copyright ©️ {{ getYear() }} | GitJoke. All rights reserved.
+                <h4 class="app-footer__copyright__text">Copyright &copy; {{ getYear() }} | GitJoke. All rights reserved.
                 </h4>
             </div>
         </footer>
@@ -103,18 +103,31 @@ h1 {
     gap: 5px;
 }
 
+.app-footer__metadata:hover .app-footer__author {
+    color: #fff;
+} 
+
 .app-footer__author {
     margin: 0;
     font-family: 'SF Pro Text', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 14px;
     color: #7C838B;
+    transition: color 0.3s ease;
 }
 
 .app-footer__socials {
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+.app-footer__socials a img {
+    transition: filter 0.3s ease;
+}
+
+.app-footer__socials a img:hover {
+    filter: brightness(0) invert(1); /* vuelve la imagen blanca */
 }
 
 .app-footer__copyright {

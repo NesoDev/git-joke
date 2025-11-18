@@ -1,4 +1,4 @@
-/** ---------------- SF Pro Text Family ----------------*/
+/** ================================== SF Pro Text Family ==================================*/
 
 /* Thin */
 @font-face {
@@ -68,6 +68,55 @@
   font-family: "SF Pro Text";
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Black.woff2") format("woff2");
   font-weight: 900;
+  font-style: normal;
+  font-display:fallback;
+}
+
+
+
+/** ================================== FiraCode Family ==================================*/
+
+/* Light */
+@font-face {
+  font-family: "FiraCode";
+  src: url("/fonts/FiraCode/FiraCode-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display:fallback;
+}
+
+/* Regular */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/fonts/FiraCode/FiraCode-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display:fallback;
+}
+
+/* Medium */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/fonts/FiraCode/FiraCode-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display:fallback;
+}
+
+/* Semibold */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/fonts/FiraCode/FiraCode-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display:fallback;
+}
+
+/* Bold */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/fonts/FiraCode/FiraCode-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display:fallback;
 }

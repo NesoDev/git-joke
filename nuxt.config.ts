@@ -5,15 +5,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "GitJoke",
-      link: [
-        {
-          rel: "preload",
-          href: "/fonts/SFPro-Text/SF-Pro-Text-Bold.woff2",
-          as: "font",
-          type: "font/woff2",
-          crossorigin: "anonymous",
-        },
-      ],
     },
   },
 
