@@ -48,7 +48,7 @@ import InputRoast from '~/components/InputRoast.vue';
 
 .roast-page__title-top {
     font-weight: 800;
-    font-size: 60px;
+    font-size: clamp(40px, 15vw, 80px);
 }
 
 .roast-page__title-bottom {
@@ -58,7 +58,8 @@ import InputRoast from '~/components/InputRoast.vue';
 
 .roast-page__card {
     position: relative;
-    max-width: 400px;
+    width: calc(100vw - 40px);
+    max-width: 500px;
     height: 60%;
     border-radius: 56px 56px 0 0;
     display: flex;
@@ -72,7 +73,7 @@ import InputRoast from '~/components/InputRoast.vue';
     top: 0;
     width: 100%;
     height: 100px;
-    padding: 16px;
+    padding: 16px 18px;
     box-sizing: border-box;
 }
 
