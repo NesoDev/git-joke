@@ -1,0 +1,7 @@
+<svg width="0" height="0" style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true" focusable="false">
+    <defs>
+        <clipPath id="roast-clip" clipPathUnits="objectBoundingBox">
+            <path d=" M 0 0.206452 C 0 0.134187 0 0.098054 0.015146 0.070453 C 0.028468 0.046174 0.049726 0.026434 0.075872 0.014064 C 0.105597 0 0.144509 0 0.222333 0 H 0.777667 C 0.855491 0 0.894402 0 0.924127 0.014064 C 0.950275 0.026434 0.971531 0.046174 0.984854 0.070453 C 1 0.098054 1 0.134187 1 0.206452 V 1 H 0 V 0.206452 Z" />
+        </clipPath>
+    </defs>
+</svg>
