@@ -11,9 +11,9 @@
 .input-roast {
     position: relative;
     width: 100%;
-    height: 70px;
+    height: 75px;
     background: #000;
-    border-radius: 35px;
+    border-radius: 37.5px;
 }
 
 input {
@@ -21,7 +21,7 @@ input {
     height: 100%;
     border: none;
     margin: 0;
-    padding: 0px 80px 0px 25px;
+    padding: 0px 80px 0px 30px;
     font-family: "FiraCode", sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -34,6 +34,10 @@ input::placeholder {
     color: #7C838B;
 }
 
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 button {
     border: none;
