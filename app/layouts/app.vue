@@ -14,15 +14,16 @@
                 <p class="app-footer__author" aria-label="author">Made by NesoDev</p>
                 <div class="app-footer__socials" aria-label="socials">
                     <a href="https://github.com/NesoDev">
-                        <img src="@/assets/icons/ic_github.svg" alt="">
+                        <img src="/icons/ic_github.svg" alt="">
                     </a>
                     <a href="https://www.linkedin.com/in/avendano-meza-ever-frank/">
-                        <img src="@/assets/icons/ic_linkedin.svg" alt="">
+                        <img src="/icons/ic_linkedin.svg" alt="">
                     </a>
                 </div>
             </div>
             <div class="app-footer__copyright">
-                <h4 class="app-footer__copyright__text">Copyright ©️ {{ getYear() }} | GitJoke. All rights reserved.</h4>
+                <h4 class="app-footer__copyright__text">Copyright ©️ {{ getYear() }} | GitJoke. All rights reserved.
+                </h4>
             </div>
         </footer>
     </div>
@@ -39,13 +40,15 @@ const getYear = () => {
 /** ---------------- General ----------------*/
 .v-app {
     width: 100dvw;
-    height: fit-content
+    height: fit-content;
+    overflow: hidden;
 }
+
 /** ---------------- Header ----------------*/
 .app-navigation {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 35px;
     background: #000;
     display: flex;
     flex-direction: row;
@@ -63,9 +66,9 @@ button {
 }
 
 h1 {
-    font-family: 'SF Pro Text';
-    font-weight: 600;
-    font-size: 20px;
+    font-family: 'SF Pro Text', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
     color: #fff;
     position: absolute;
     width: fit-content;
@@ -102,8 +105,8 @@ h1 {
 
 .app-footer__author {
     margin: 0;
-    font-family: 'SF Pro Text';
-    font-weight: 500;
+    font-family: 'SF Pro Text', sans-serif;
+    font-weight: 400;
     font-size: 14px;
     color: #7C838B;
 }
@@ -115,20 +118,29 @@ h1 {
 }
 
 .app-footer__copyright {
+    position: relative;
     width: 100%;
     height: 70px;
-    outline: 1px solid #2F2F2F;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.app-footer__copyright::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #2F2F2F;
+    pointer-events: none;
+}
+
 .app-footer__copyright__text {
     margin: 0;
-    font-family: 'SF Pro Text';
+    font-family: 'SF Pro Text', sans-serif;
     font-weight: 200;
     font-size: 14px;
     color: #7C838B;
 }
-
 </style>
