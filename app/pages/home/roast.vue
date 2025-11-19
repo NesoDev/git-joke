@@ -7,7 +7,8 @@ import InputRoast from '~/components/InputRoast.vue';
         <svg width="0" height="0" style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true" focusable="false">
             <defs>
                 <clipPath id="roast-clip" clipPathUnits="objectBoundingBox">
-                    <path d="M 0 0.206452 C 0 0.134187 0 0.098054 0.015146 0.070453 C 0.028468 0.046174 0.049726 0.026434 0.075872 0.014064 C 0.105597 0 0.144509 0 0.222333 0 H 0.777667 C 0.855491 0 0.894402 0 0.924127 0.014064 C 0.950275 0.026434 0.971531 0.046174 0.984854 0.070453 C 1 0.098054 1 0.134187 1 0.206452 V 1 H 0 V 0.206452 Z" />
+                    <path
+                        d="M 0 0.206452 C 0 0.134187 0 0.098054 0.015146 0.070453 C 0.028468 0.046174 0.049726 0.026434 0.075872 0.014064 C 0.105597 0 0.144509 0 0.222333 0 H 0.777667 C 0.855491 0 0.894402 0 0.924127 0.014064 C 0.950275 0.026434 0.971531 0.046174 0.984854 0.070453 C 1 0.098054 1 0.134187 1 0.206452 V 1 H 0 Z" />
                 </clipPath>
             </defs>
         </svg>
@@ -59,8 +60,12 @@ import InputRoast from '~/components/InputRoast.vue';
 }
 
 .roast-page__title-bottom {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 25px;
+}
+
+#roast-clip {
+    padding: 0;
 }
 
 .roast-page__card {
@@ -68,11 +73,10 @@ import InputRoast from '~/components/InputRoast.vue';
     width: calc(100vw - 40px);
     max-width: 400px;
     height: 60%;
+    background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: start;
-    -webkit-clip-path: url(#roast-clip);
-    clip-path: url(#roast-clip);
     overflow: hidden;
 }
 
@@ -81,17 +85,20 @@ import InputRoast from '~/components/InputRoast.vue';
     top: 0;
     width: 100%;
     height: 100px;
-    padding: 18px 20px;
+    padding: 15px 18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
 
 img.roast-page__card-bg {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
+    clip-path: url(#roast-clip);
+    pointer-events: none;
 }
 
 img.roast-page__card-cat {
@@ -103,10 +110,11 @@ img.roast-page__card-cat {
 
 .roast-page-card-shadow {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     width: 100%;
-    height: 220px;
-    background: linear-gradient(to top, #000, transparent);
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, #000);
     pointer-events: none;
+    z-index: 2;
 }
 </style>

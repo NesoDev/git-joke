@@ -23,7 +23,7 @@ input {
     margin: 0;
     padding: 0px 80px 0px 30px;
     font-family: "FiraCode", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     color: #ffffff;
     box-sizing: border-box;
@@ -58,6 +58,6 @@ button {
 
 button img {
     aspect-ratio: 1 / 1;
-    width: 70%;
+    width: 60%;
 }
 </style>
