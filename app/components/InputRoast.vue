@@ -11,9 +11,9 @@
 .input-roast {
     position: relative;
     width: 100%;
-    height: 75px;
-    background: #000;
-    border-radius: 37.5px;
+    height: 70px;
+    background: hsl(0, 0%, 0%);
+    border-radius: 35px;
 }
 
 input {
