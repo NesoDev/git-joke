@@ -68,7 +68,7 @@ import InputRoast from '~/components/InputRoast.vue';
     position: relative;
     width: calc(100vw - 40px);
     max-width: 400px;
-    height: calc(100% - 200px);
+    height: calc(100%);
     background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@ import InputRoast from '~/components/InputRoast.vue';
 img.roast-page__card-bg {
     width: 100%;
     height: 100%;
-    min-height: calc(100% - 200px);
+    min-height: calc(100%);
     object-fit: cover;
     clip-path: url(#roast-clip);
     pointer-events: none;
