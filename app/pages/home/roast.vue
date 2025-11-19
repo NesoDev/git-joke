@@ -72,7 +72,7 @@ import InputRoast from '~/components/InputRoast.vue';
     position: relative;
     width: calc(100vw - 40px);
     max-width: 400px;
-    height: 60%;
+    height: clamp(400px, 60%, 800px);
     background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -115,6 +115,5 @@ img.roast-page__card-cat {
     height: 200px;
     background: linear-gradient(to bottom, transparent, #000);
     pointer-events: none;
-    z-index: 2;
 }
 </style>
