@@ -31,6 +31,7 @@ onMounted(() => {
   border-radius: 32.5px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  z-index: 2;
 }
 
 input {
