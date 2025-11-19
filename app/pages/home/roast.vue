@@ -72,7 +72,8 @@ import InputRoast from '~/components/InputRoast.vue';
     position: relative;
     width: calc(100vw - 40px);
     max-width: 400px;
-    height: clamp(400px, 60%, 800px);
+    height: 100%;
+    
     background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
