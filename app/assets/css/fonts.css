@@ -6,7 +6,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Light */
@@ -15,7 +15,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Regular */
@@ -24,7 +24,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Medium */
@@ -33,7 +33,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Semibold */
@@ -42,7 +42,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Bold */
@@ -51,7 +51,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Heavy */
@@ -60,7 +60,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Heavy.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Black */
@@ -69,7 +69,7 @@
   src: url("/fonts/SFPro-Text/SF-Pro-Text-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 
@@ -82,41 +82,41 @@
   src: url("/fonts/FiraCode/FiraCode-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Regular */
 @font-face {
-  font-family: "SF Pro Text";
+  font-family: "FiraCode";
   src: url("/fonts/FiraCode/FiraCode-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Medium */
 @font-face {
-  font-family: "SF Pro Text";
+  font-family: "FiraCode";
   src: url("/fonts/FiraCode/FiraCode-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Semibold */
 @font-face {
-  font-family: "SF Pro Text";
+  font-family: "FiraCode";
   src: url("/fonts/FiraCode/FiraCode-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }
 
 /* Bold */
 @font-face {
-  font-family: "SF Pro Text";
+  font-family: "FiraCode";
   src: url("/fonts/FiraCode/FiraCode-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display:fallback;
+  font-display:swap;
 }

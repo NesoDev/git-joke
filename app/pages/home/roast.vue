@@ -59,7 +59,7 @@ import InputRoast from '~/components/InputRoast.vue';
 }
 
 .roast-page__title-bottom {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 30px;
 }
 
