@@ -4,11 +4,11 @@ import InputRoast from '~/components/InputRoast.vue';
 
 <template>
     <NuxtLayout name="home">
-        <svg width="0" height="0" style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true" focusable="false">
+        <svg width="0" height="0" style="position:absolute; left:-9999px; top:-9999px;">
             <defs>
                 <clipPath id="roast-clip" clipPathUnits="objectBoundingBox">
                     <path
-                        d="M 0 0.206452 C 0 0.134187 0 0.098054 0.015146 0.070453 C 0.028468 0.046174 0.049726 0.026434 0.075872 0.014064 C 0.105597 0 0.144509 0 0.222333 0 H 0.777667 C 0.855491 0 0.894402 0 0.924127 0.014064 C 0.950275 0.026434 0.971531 0.046174 0.984854 0.070453 C 1 0.098054 1 0.134187 1 0.206452 V 1 H 0 Z" />
+                        d="M 0 0.14 C 0 0.095 0.01 0.07 0.03 0.05 C 0.05 0.03 0.08 0.015 0.12 0.007 C 0.16 0 0.20 0 0.30 0 H 0.70 C 0.80 0 0.84 0 0.88 0.007 C 0.92 0.015 0.95 0.03 0.97 0.05 C 0.99 0.07 1 0.095 1 0.14 V 1 H 0 Z" />
                 </clipPath>
             </defs>
         </svg>
@@ -64,16 +64,12 @@ import InputRoast from '~/components/InputRoast.vue';
     font-size: 25px;
 }
 
-#roast-clip {
-    padding: 0;
-}
-
 .roast-page__card {
     position: relative;
     width: calc(100vw - 40px);
     max-width: 400px;
     height: 100%;
-    max-width: 600px;
+    max-height: 550px;
     background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -86,7 +82,7 @@ import InputRoast from '~/components/InputRoast.vue';
     top: 0;
     width: 100%;
     height: 100px;
-    padding: 15px 18px;
+    padding: 20px 23px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -97,7 +93,6 @@ import InputRoast from '~/components/InputRoast.vue';
 img.roast-page__card-bg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     clip-path: url(#roast-clip);
     pointer-events: none;
 }
