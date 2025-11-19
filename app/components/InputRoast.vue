@@ -55,4 +55,9 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+button img {
+    aspect-ratio: 1 / 1;
+    width: 70%;
+}
 </style>

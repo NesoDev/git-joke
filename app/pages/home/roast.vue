@@ -55,24 +55,25 @@ import InputRoast from '~/components/InputRoast.vue';
 
 .roast-page__title-top {
     font-weight: 800;
-    font-size: clamp(40px, 15vw, 80px);
+    font-size: clamp(40px, 15vw, 60px);
 }
 
 .roast-page__title-bottom {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .roast-page__card {
     position: relative;
     width: calc(100vw - 40px);
-    max-width: 500px;
+    max-width: 400px;
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: start;
     -webkit-clip-path: url(#roast-clip);
     clip-path: url(#roast-clip);
+    overflow: hidden;
 }
 
 .roast-page__card-top {
@@ -80,7 +81,7 @@ import InputRoast from '~/components/InputRoast.vue';
     top: 0;
     width: 100%;
     height: 100px;
-    padding: 20px 25px;
+    padding: 18px 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -90,7 +91,7 @@ import InputRoast from '~/components/InputRoast.vue';
 img.roast-page__card-bg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 img.roast-page__card-cat {
@@ -102,9 +103,10 @@ img.roast-page__card-cat {
 
 .roast-page-card-shadow {
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     width: 100%;
-    height: 200px;
-    background: linear-gradient(to top, #000, transparent)
+    height: 220px;
+    background: linear-gradient(to top, #000, transparent);
+    pointer-events: none;
 }
 </style>
