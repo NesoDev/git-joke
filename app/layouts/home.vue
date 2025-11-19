@@ -67,26 +67,29 @@ a {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 0 12px;
-    height: 40px;
+    padding: 0 20px;
+    height: 44px;
     width: fit-content;
-    border-radius: 20px;
+    border-radius: 26px;
     box-sizing: border-box;
     text-decoration: none;
-    background: #111;
+    background: #1E1E20;
     /* inactive default */
     transition: background 0.15s ease;
 }
 
 a.router-link-active {
-    background: #fff;
+    background: #F5F5F7;
 }
 
 a h2 {
     margin: 0;
-    font-family: "SF Pro Text", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "SF Pro Icons", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.2353641176;
+    letter-spacing: -0.022em;
     transition: color 0.15s ease;
 }
 
@@ -95,7 +98,7 @@ a.router-link-active h2 {
 }
 
 a:not(.router-link-active) h2 {
-    color: #7C838B;
+    color: #F5F5F7;
 }
 
 a.router-link-active img {
@@ -111,7 +114,7 @@ a img {
 
 /* Special case: leaderboard icon-only box */
 .home-navigation__list-right a {
-    width: 40px;
+    width: 44px;
     padding: 0;
     border-radius: 12px;
     justify-content: center;

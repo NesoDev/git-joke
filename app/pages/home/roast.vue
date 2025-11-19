@@ -4,18 +4,10 @@ import InputRoast from '~/components/InputRoast.vue';
 
 <template>
     <NuxtLayout name="home">
-        <svg width="0" height="0" style="position:absolute; left:-9999px; top:-9999px;">
-            <defs>
-                <clipPath id="roast-clip" clipPathUnits="objectBoundingBox">
-                    <path
-                        d="M 0 0.14 C 0 0.095 0.01 0.07 0.03 0.05 C 0.05 0.03 0.08 0.015 0.12 0.007 C 0.16 0 0.20 0 0.30 0 H 0.70 C 0.80 0 0.84 0 0.88 0.007 C 0.92 0.015 0.95 0.03 0.97 0.05 C 0.99 0.07 1 0.095 1 0.14 V 1 H 0 Z" />
-                </clipPath>
-            </defs>
-        </svg>
         <div class="roast-page">
             <p class="roast-page__title">
                 <span class="roast-page__title-top">Roast your</span>
-                <span class="roast-page__title-bottom">&lt;/Github profile&gt;</span>
+                <span class="roast-page__title-bottom">Github profile</span>
             </p>
             <div class="roast-page__card">
                 <div class="roast-page__card-top">
@@ -37,8 +29,8 @@ import InputRoast from '~/components/InputRoast.vue';
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 25px;
-    color: white;
+    gap: 55px;
+    color: #F5F5F7;
 }
 
 .roast-page__title {
@@ -48,28 +40,31 @@ import InputRoast from '~/components/InputRoast.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0px;
 }
 
 .roast-page__title span {
-    font-family: "SF Pro Text", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 }
 
 .roast-page__title-top {
-    font-weight: 800;
+    font-weight: 600;
     font-size: clamp(40px, 15vw, 60px);
 }
 
 .roast-page__title-bottom {
-    font-weight: 300;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: clamp(40px, 15vw, 60px);
 }
 
 .roast-page__card {
     position: relative;
     width: calc(100vw - 40px);
     max-width: 400px;
-    height: calc(100%);
+    height: calc(100% - 300px);
     background: rgb(0, 0, 0);
+    border-radius: 56px 56px 0 0;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -81,7 +76,7 @@ import InputRoast from '~/components/InputRoast.vue';
     top: 0;
     width: 100%;
     height: auto;
-    padding: 20px 23px;
+    padding: 18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -94,7 +89,6 @@ img.roast-page__card-bg {
     height: 100%;
     min-height: calc(100%);
     object-fit: cover;
-    clip-path: url(#roast-clip);
     pointer-events: none;
 }
 

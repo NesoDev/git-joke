@@ -66,7 +66,9 @@ button {
 }
 
 h1 {
-    font-family: 'SF Pro Text', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Text", "Inter",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     color: #fff;
@@ -105,11 +107,13 @@ h1 {
 
 .app-footer__metadata:hover .app-footer__author {
     color: #fff;
-} 
+}
 
 .app-footer__author {
     margin: 0;
-    font-family: 'SF Pro Text', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Text", "Inter",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #7C838B;
@@ -127,7 +131,8 @@ h1 {
 }
 
 .app-footer__socials a img:hover {
-    filter: brightness(0) invert(1); /* vuelve la imagen blanca */
+    filter: brightness(0) invert(1);
+    /* vuelve la imagen blanca */
 }
 
 .app-footer__copyright {
@@ -151,7 +156,9 @@ h1 {
 
 .app-footer__copyright__text {
     margin: 0;
-    font-family: 'SF Pro Text', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Text", "Inter",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
     font-size: 14px;
     color: #7C838B;
