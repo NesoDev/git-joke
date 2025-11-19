@@ -80,7 +80,7 @@ import InputRoast from '~/components/InputRoast.vue';
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: auto;
     padding: 20px 23px;
     box-sizing: border-box;
     display: flex;
