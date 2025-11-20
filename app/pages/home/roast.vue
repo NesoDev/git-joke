@@ -76,6 +76,8 @@ increase()
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-wrap: wrap;
+    text-align: center;
     line-height: 350%;
 }
 
