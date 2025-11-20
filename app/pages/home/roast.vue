@@ -50,47 +50,9 @@ increase()
     <NuxtLayout name="home">
         <div class="roast-page">
             <p class="roast-page__title">
-                <span class="roast-page__title-top">Roast your</span>
-                <span class="roast-page__title-bottom">Github profile</span>
+                <span class="roast-page__title-top">Roast your Github profile.</span>
             </p>
-            <div class="roast-page__card">
                 <InputRoast />
-                <div class="roast-page__card__flags">
-                    <div id="flag-roasts" class="flag">
-                        <div class="flag__box-img">
-                            <img src="/icons/ic_fire.svg" alt="">
-                        </div>
-                        <p class="flag__box__text">
-                            <span class="flag__box__text-top">{{ `${stats.roasts < 10 ? "" : "+ "
-                                }${metrics.roasts.counter}` }}</span>
-                                    <span class="flag__box__text-bottom">roasts</span>
-                        </p>
-                    </div>
-                    <div id="flag-reactions" class="flag">
-                        <div class="flag__box-img">
-                            <img src="/icons/ic_smile.svg" alt="">
-                        </div>
-                        <p class="flag__box__text">
-                            <span class="flag__box__text-top">{{ `${stats.reactions < 10 ? "" : "+ "
-                                }${metrics.reactions.counter}` }}</span>
-                                    <span class="flag__box__text-bottom">reactions</span>
-                        </p>
-                    </div>
-                    <div id="flag-forwards" class="flag">
-                        <div class="flag__box-img">
-                            <img src="/icons/ic_asterisk.svg" alt="">
-                        </div>
-                        <p class="flag__box__text">
-                            <span class="flag__box__text-top">{{ `${stats.forwards < 10 ? "" : "+ "
-                                }${metrics.forwards.counter}` }}</span>
-                                    <span class="flag__box__text-bottom">forwards</span>
-                        </p>
-                    </div>
-                </div>
-                <img class="roast-page__card-cat" src="/img/roast-card-cat.svg" alt="">
-                <img class="roast-page__card-bg" src="/img/roast-card-bg.png" alt="">
-                <div class="roast-page-card-shadow" />
-            </div>
         </div>
     </NuxtLayout>
 </template>
@@ -104,7 +66,7 @@ increase()
     justify-content: start;
     align-items: center;
     gap: 30px;
-    color: #F5F5F7;
+    color: hsl(240, 11%, 96%);
 }
 
 .roast-page__title {
@@ -114,7 +76,7 @@ increase()
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    line-height: 350%;
 }
 
 .roast-page__title span {
@@ -124,22 +86,21 @@ increase()
 
 .roast-page__title-top {
     font-weight: 600;
-    font-size: clamp(40px, 15vw, 60px);
+    font-size: clamp(25px, 18vw, 54px);
 }
 
 .roast-page__title-bottom {
     font-weight: 600;
-    font-size: clamp(40px, 15vw, 60px);
+    font-size: clamp(25px, 18vw, 54px);
 }
 
 .roast-page__card {
     position: relative;
     width: 400px;
     max-width: 100%;
-    height: calc(100% - 300px);
+    height: fit-content;
     background: rgb(0, 0, 0);
-    border-radius: 56px 56px 0 0;
-    padding: 18px 18px 0px 18px;
+    border-radius: 56px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -237,13 +198,14 @@ img.roast-page__card-bg {
     width: 100%;
     height: 100%;
     min-height: calc(100%);
+    filter: brightness(0.2);
     object-fit: cover;
     pointer-events: none;
     z-index: 1;
 }
 
 img.roast-page__card-cat {
-    width: 80%;
+    width: 100%;
     height: auto;
     z-index: 2;
 }
@@ -252,7 +214,7 @@ img.roast-page__card-cat {
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background: linear-gradient(to bottom, transparent, #000);
     pointer-events: none;
     z-index: 3;

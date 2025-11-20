@@ -33,7 +33,7 @@
     height: calc(100dvh - 35px);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     padding: 20px;
     box-sizing: border-box;
     transition: height 0.3s ease;

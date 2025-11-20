@@ -1,21 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const inputRef = ref(null)
-
-onMounted(() => {
-  const el = inputRef.value
-  if (!el) return
-
-  el.addEventListener("input", () => {
-    el.value = el.value.replace(/ /g, "\u2003")
-  })
-})
 </script>
 
 <template>
   <div class="input-roast">
-    <input ref="inputRef" type="text" name="username" autocomplete="off" placeholder="Enter username">
+    <input type="text" name="username" autocomplete="off" placeholder="Enter username">
     <button>
       <img src="/icons/ic_arrow.svg" alt="">
     </button>
@@ -25,10 +13,12 @@ onMounted(() => {
 <style scoped>
 .input-roast {
   position: relative;
-  width: 100%;
+  width: 400px;
+    max-width: 100%;
   height: 65px;
-  background: rgba(0, 0, 0, 0.933);
+  background: #0E0E0E;
   border-radius: 32.5px;
+  border: 1px solid #282828;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 2;
@@ -43,8 +33,8 @@ input {
   font-family: -apple-system, BlinkMacSystemFont,
     "SF Pro Display", "SF Pro Text", "Inter",
     "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 20px;
   color: #F5F5F7;
   line-height: 1.2353641176;
   letter-spacing: -0.022em;
