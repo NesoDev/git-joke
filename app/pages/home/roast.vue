@@ -170,18 +170,22 @@ increase()
 .page-bottom {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /** mobile first */
     gap: var(--s-size-5);
 }
 
 .page__metrics {
-    width: 100%;
     padding: 0px var(--s-size-5);
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     /** mobile first */
+    width: fit-content;
     height: 120px;
+    gap: clamp(var(--s-size-5), var(--s-size-5), var(--s-size-6));
     justify-content: space-between;
 }
 
