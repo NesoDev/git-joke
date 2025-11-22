@@ -295,7 +295,7 @@ increase()
     background: var(--bg-load);
     /** mobile first */
     aspect-ratio: 1 / 1;
-    min-height: 100px;
+    min-height: 120px;
     overflow: hidden;
 }
 
