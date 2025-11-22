@@ -311,6 +311,7 @@ increase()
     /** mobile first */
     height: 1;
     min-height: 150px;
+    max-height: 180px;
     overflow: hidden;
 }
 
@@ -325,7 +326,7 @@ increase()
 }
 
 .sample__card video {
-    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
