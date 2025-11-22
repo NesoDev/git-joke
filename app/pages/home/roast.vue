@@ -161,7 +161,7 @@ increase()
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: var(--text-primary);
     /** mobile first */
-    width: 10ch;
+    width: 13ch;
     font-weight: 600;
     font-size: var(--r-size-10);
 }
