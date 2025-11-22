@@ -144,11 +144,13 @@ increase()
 
 .page__title {
     margin: 0;
+    display: flex;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: var(--text-primary);
     /** mobile first */
+    flex-direction: column;
     font-weight: 600;
     font-size: var(--r-size-9);
 }
@@ -381,6 +383,8 @@ increase()
     .page__title {
         font-weight: 500;
         font-size: var(--r-size-15);
+        flex-direction: row;
+        gap: var(--s-size-3);
     }
 
     .page-middle {
