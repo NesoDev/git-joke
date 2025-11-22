@@ -292,7 +292,6 @@ increase()
     grid-template-columns: repeat(3, 1fr);
     /** mobile first */
     width: 100%;
-    background: gray;
     gap: var(--s-size-4);
 }
 
