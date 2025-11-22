@@ -61,7 +61,7 @@ increase()
                     <div id="roast-icon" class="metric__icon"><img src="/icons/ic_fire.svg" alt=""></div>
                     <p class="metric__text">
                         <span class="metric__text-main">{{ `${stats.roasts < 10 ? "" : "+ "}${metrics.roasts.counter}`
-                                }}</span>
+                        }}</span>
                                 <span class="metric__text-secondary">roasts</span>
                     </p>
                 </div>
@@ -281,7 +281,7 @@ increase()
     color: var(--text-link);
     font-weight: 300;
     /** mobile first */
-    font-size: var(--r-size-4);
+    font-size: var(--r-size-3);
     display: flex;
     flex-direction: column;
 }
@@ -345,6 +345,10 @@ increase()
     .detail-text {
         font-weight: 500;
         font-size: var(--r-size-6);
+    }
+
+    .detail-link {
+        font-size: var(--r-size-4);
     }
 }
 
