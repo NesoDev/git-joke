@@ -180,10 +180,9 @@ increase()
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     /** mobile first */
     height: 100px;
-    gap: var(--s-size-4);
+    justify-content: space-between;
 }
 
 .metric-card {
@@ -234,6 +233,7 @@ increase()
 
     .page__metrics {
         height: 140px;
+        gap: var(--s-size-5);
     }
 }
 </style>
