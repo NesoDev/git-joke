@@ -197,15 +197,15 @@ increase()
 }
 
 #roast-icon {
-    background: #FF3030;
+    background: #333336;
 }
 
 #reaction-icon {
-    background: #842EFF;
+    background: #333336;
 }
 
 #forward-icon {
-    background: #FF1F8F;
+    background: #333336;
 }
 
 .metric__text {
