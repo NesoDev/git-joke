@@ -61,7 +61,7 @@ increase()
                     <div id="roast-icon" class="metric__icon"><img src="/icons/ic_fire.svg" alt=""></div>
                     <p class="metric__text">
                         <span class="metric__text-main">{{ `${stats.roasts < 10 ? "" : "+ "}${metrics.roasts.counter}`
-                        }}</span>
+                                }}</span>
                                 <span class="metric__text-secondary">roasts</span>
                     </p>
                 </div>
@@ -160,35 +160,40 @@ increase()
     width: fit-content;
     max-width: 100%;
     height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     padding: 0 var(--s-size-5);
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     /** mobile first */
-    gap: var(--s-size-4);
+    gap: var(--s-size-5);
 }
 
 .page__metric {
     position: relative;
-    width: 120px;
-    height: 120px;
     background: var(--bg-quaternary);
-    border-radius: var(--s-size-8);
+    aspect-ratio: 1 / 1;
+    /** mobile first */
+    width: 100px;
+    border-radius: var(--s-size-6);
 }
 
 .metric__icon {
     position: absolute;
-    top: var(--s-size-3);
-    left: var(--s-size-3);
-    width: 36px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: gray;
+    /** mobile first */
+    width: 28px;
+    top: var(--s-size-2);
+    left: var(--s-size-2);
+}
+
+.metric__icon img {
+    /** mobile first */
+    width: 18px;
 }
 
 #roast-icon {
@@ -205,26 +210,29 @@ increase()
 
 .metric__text {
     position: absolute;
-    bottom: var(--s-size-5);
-    right: var(--s-size-5);
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: var(--s-size-0);
+    /** mobile first */
+    gap: 0px;
+    bottom: var(--s-size-4);
+    right: var(--s-size-4);
 }
 
 .metric__text-main {
     color: var(--text-primary);
-    font-weight: 800;
+    /** mobile first */
+    font-weight: 600;
     font-size: var(--r-size-5);
 }
 
 .metric__text-secondary {
     color: var(--text-secondary);
-    font-weight: 400;
+    /** mobile first */
+    font-weight: 300;
     font-size: var(--r-size-4);
 }
 
@@ -259,9 +267,9 @@ increase()
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: var(--text-primary);
-    font-weight: 500;
     /** mobile first */
-    font-size: var(--r-size-6);
+    font-weight: 600;
+    font-size: var(--r-size-5);
     display: flex;
     flex-direction: column;
 }
@@ -293,18 +301,16 @@ increase()
     align-items: center;
     border-radius: var(--s-size-8);
 
-    background: linear-gradient(
-        90deg,
-        var(--bg-quaternary) 25%,
-        rgba(255, 255, 255, 0.03) 50%,
-        var(--bg-quaternary) 75%
-    );
+    background: linear-gradient(90deg,
+            var(--bg-quaternary) 25%,
+            rgba(255, 255, 255, 0.03) 50%,
+            var(--bg-quaternary) 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
 
     /** mobile first */
     aspect-ratio: 1 / 1;
-    min-height: 120px;
+    min-height: 100px;
     overflow: hidden;
 }
 
@@ -312,6 +318,7 @@ increase()
     0% {
         background-position: 200% 0;
     }
+
     100% {
         background-position: -200% 0;
     }
@@ -331,6 +338,38 @@ increase()
         gap: var(--s-size-1);
     }
 
+    .page-middle {
+        gap: var(--s-size-8);
+    }
+
+    .page__metric {
+        height: 120px;
+        width: 120px;
+        border-radius: var(--s-size-8);
+    }
+
+    .metric__icon {
+        width: var(--s-size-9);
+        top: var(--s-size-3);
+        left: var(--s-size-3);
+    }
+
+    .metric__icon img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .metric__text {
+        gap: var(--s-size-0);
+        bottom: var(--s-size-5);
+        right: var(--s-size-5);
+    }
+
+    .metric__text-main {
+        font-weight: 800;
+        font-size: var(--r-size-6);
+    }
+
     .roast__detail {
         max-width: 800px;
     }
@@ -343,6 +382,11 @@ increase()
         aspect-ratio: none;
         width: 100%;
         max-height: 130px;
+    }
+
+    .detail-text {
+        font-weight: 500;
+        font-size: var(--r-size-6);
     }
 
     .detail-link {
