@@ -309,8 +309,8 @@ increase()
     animation: shimmer 1.5s infinite;
 
     /** mobile first */
-    aspect-ratio: 1 / 1;
-    height: 100%;
+    height: 1;
+    max-height: 120px;
     overflow: hidden;
 }
 
@@ -325,7 +325,7 @@ increase()
 }
 
 .sample__card video {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
     display: block;
 }
