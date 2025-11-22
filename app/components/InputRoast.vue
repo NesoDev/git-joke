@@ -14,14 +14,11 @@
 .input-roast {
   position: relative;
   width: 400px;
-    max-width: 100%;
+  max-width: 100%;
   height: 65px;
-  background: #0E0E0E;
+  background: var(--bg-secondary);
   border-radius: 32.5px;
-  border: 1px solid #282828;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 2;
+  border: 1px solid var(--border-secondary);
 }
 
 input {
@@ -34,16 +31,14 @@ input {
     "SF Pro Display", "SF Pro Text", "Inter",
     "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  color: #F5F5F7;
-  line-height: 1.2353641176;
-  letter-spacing: -0.022em;
+  font-size: var(--r-size-5);
+  color: var(--text-primary);
   box-sizing: border-box;
   background: transparent;
 }
 
 input::placeholder {
-  color: #F5F5F7;
+  color: var(--text-inactive);
 }
 
 input:focus {
@@ -62,7 +57,7 @@ button {
   aspect-ratio: 1 / 1;
   height: calc(100% - 20px);
   border-radius: 100%;
-  background: #ffffff;
+  background: var(--bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;

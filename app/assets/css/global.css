@@ -1,5 +1,70 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
+:root {
+  /* ----- static Scale */
+  --s-size-0: 2px;
+  --s-size-1: 4px;
+  --s-size-2: 8px;
+  --s-size-3: 12px;
+  --s-size-4: 16px;
+  --s-size-5: 20px;
+  --s-size-6: 24px;
+  --s-size-7: 28px;
+  --s-size-8: 32px;
+  --s-size-9: 36px;
+  --s-size-10: 40px;
+  --s-size-11: 44px;
+  --s-size-12: 48px;
+  --s-size-13: 52px;
+  --s-size-14: 56px;
+  --s-size-15: 60px;
+
+  /* ----- Relative scale ----- */
+  --r-size-1: 0.25rem;
+  --r-size-2: 0.5rem;
+  --r-size-3: 0.75rem;
+  --r-size-4: 1rem;
+  --r-size-5: 1.25rem;
+  --r-size-6: 1.5rem;
+  --r-size-7: 1.75rem;
+  --r-size-8: 2rem;
+  --r-size-9: 2.25rem;
+  --r-size-10: 2.5rem;
+  --r-size-11: 2.75rem;
+  --r-size-12: 3rem;
+  --r-size-13: 3.25rem;
+  --r-size-14: 3.5rem;
+  --r-size-15: 3.75rem;
+  --r-size-16: 4rem;
+}
+
+:root {
+  /* ----- Breakpoints ----- */
+  --bp-sm: 688px;
+  --bp-md: 992px;
+  --bp-lg: 1312px;
+
+  /* ----- Backgrounds ----- */
+  --bg-surface: #000;
+  --bg-primary: #f5f5f7;
+  --bg-secondary: #0e0e0e;
+  --bg-tertiary: #1e1e20;
+  --bg-quaternary: #111;
+
+  /* ----- Text ----- */
+  --text-primary: #f5f5f7;
+  --text-secondary: #939393;
+  --text-active: #000;
+  --text-inactive: #888888;
+  --text-link: #2897ff;
+
+  /* ----- Borders ----- */
+  --border-primary: #fff;
+  --border-secondary: #282828;
+  --border-tertiary: #333336;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-surface);
 }

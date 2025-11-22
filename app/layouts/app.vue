@@ -49,14 +49,13 @@ const getYear = () => {
     position: relative;
     width: 100%;
     height: 35px;
-    background: #000;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    padding: 0px 20px;
+    padding: 0 var(--s-size-5);
     box-sizing: border-box;
-    outline: 1px solid #2F2F2F;
+    outline: 1px solid var(--border-tertiary);
 }
 
 button {
@@ -70,8 +69,8 @@ h1 {
         "SF Pro Display", "SF Pro Text", "Inter",
         "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: 18px;
-    color: #fff;
+    font-size: var(--r-size-4);
+    color: var(--text-primary);
     position: absolute;
     width: fit-content;
     height: fit-content;
@@ -90,7 +89,6 @@ h1 {
     position: relative;
     width: 100%;
     height: 70px;
-    background: #000000;
 }
 
 .app-footer__metadata {
@@ -102,11 +100,11 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: var(--s-size-2);
 }
 
 .app-footer__metadata:hover .app-footer__author {
-    color: #fff;
+    color: var(--text-primary);
 }
 
 .app-footer__author {
@@ -115,15 +113,15 @@ h1 {
         "SF Pro Display", "SF Pro Text", "Inter",
         "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 14px;
-    color: #7C838B;
+    font-size: var(--r-size-4);
+    color: var(--text-secondary);
     transition: color 0.3s ease;
 }
 
 .app-footer__socials {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: var(--s-size-3);
 }
 
 .app-footer__socials a img {
@@ -132,7 +130,6 @@ h1 {
 
 .app-footer__socials a img:hover {
     filter: brightness(0) invert(1);
-    /* vuelve la imagen blanca */
 }
 
 .app-footer__copyright {
@@ -150,7 +147,7 @@ h1 {
     top: 0;
     width: 100%;
     height: 1px;
-    background: #2F2F2F;
+    background: var(--border-tertiary);
     pointer-events: none;
 }
 
@@ -160,7 +157,7 @@ h1 {
         "SF Pro Display", "SF Pro Text", "Inter",
         "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
-    font-size: 14px;
-    color: #7C838B;
+    font-size: var(--r-size-4);
+    color: var(--text-secondary);
 }
 </style>

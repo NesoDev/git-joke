@@ -2,9 +2,9 @@
 import InputRoast from '~/components/InputRoast.vue';
 
 const metrics = reactive({
-    roasts: { num: 358, counter: 0 },
-    reactions: { num: 300, counter: 0 },
-    forwards: { num: 300, counter: 0 },
+    roasts: { num: 509, counter: 0 },
+    reactions: { num: 108, counter: 0 },
+    forwards: { num: 58, counter: 0 },
 })
 
 const stats = computed(() => {
@@ -49,176 +49,293 @@ increase()
 <template>
     <NuxtLayout name="home">
         <div class="roast-page">
-            <p class="roast-page__title">
-                <span class="roast-page__title-top">Roast your Github profile.</span>
-            </p>
+            <div class="page-top">
+                <p class="page__title">Roast your Github profile</p>
                 <InputRoast />
+            </div>
+            <div class="page-middle">
+                <div id="roasts-metric" class="page__metric">
+                    <div id="roast-icon" class="metric__icon"><img src="/icons/ic_fire.svg" alt=""></div>
+                    <p class="metric__text">
+                        <span class="metric__text-main">{{ `${stats.roasts < 10 ? "" : "+ "}${metrics.roasts.counter}`
+                                }}</span>
+                                <span class="metric__text-secondary">roasts</span>
+                    </p>
+                </div>
+                <div id="roasts-metric" class="page__metric">
+                    <div id="reaction-icon" class="metric__icon"><img src="/icons/ic_smile.svg" alt=""></div>
+                    <p class="metric__text">
+                        <span class="metric__text-main">{{ `${stats.reactions < 10 ? "" : "+ "
+                            }${metrics.reactions.counter}` }}</span>
+                                <span class="metric__text-secondary">reactions</span>
+                    </p>
+                </div>
+                <div id="roasts-metric" class="page__metric">
+                    <div id="forward-icon" class="metric__icon"><img src="/icons/ic_asterisk.svg" alt=""></div>
+                    <p class="metric__text">
+                        <span class="metric__text-main">{{ `${stats.forwards < 10 ? "" : "+ "
+                            }${metrics.forwards.counter}` }}</span>
+                                <span class="metric__text-secondary">forwards</span>
+                    </p>
+                </div>
+            </div>
+            <div class="page-bottom">
+                <div class="roast__detail">
+                    <p class="detail-text">
+                        <span>Brutally honest.</span>
+                        <span>Visually stunning.</span>
+                    </p>
+                    <NuxtLink class="detail-link" to="/home/leaderboard">
+                        <span>View roasts of</span>
+                        <span>other users ></span>
+                    </NuxtLink>
+                </div>
+                <div class="roast__sample">
+                    <div class="sample__card">
+                        <img src="/media/ball.gif" alt="">
+                    </div>
+                    <div class="sample__card">
+                        <img src="/media/kaleidoscope.gif" alt="">
+                    </div>
+                    <div class="sample__card">
+                        <img src="/media/fluid.gif" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </NuxtLayout>
 </template>
 
-<style>
+<style scoped>
+/** ---------------- Page ----------------*/
 .roast-page {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    color: hsl(240, 11%, 96%);
 }
 
-.roast-page__title {
+/** ---------------- Top ----------------*/
+.page-top {
     width: 100%;
-    height: auto;
-    margin: 0;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-wrap: wrap;
+    padding: 0 var(--s-size-5);
+    box-sizing: border-box;
+    /** mobile first */
+    gap: var(--s-size-5)
+}
+
+.page__title {
+    margin: 0;
     text-align: center;
-    line-height: 350%;
-}
-
-.roast-page__title span {
     font-family: -apple-system, BlinkMacSystemFont,
-        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: var(--text-primary);
+    /** mobile first */
+    font-size: var(--r-size-11);
 }
 
-.roast-page__title-top {
-    font-weight: 600;
-    font-size: clamp(25px, 18vw, 54px);
-}
-
-.roast-page__title-bottom {
-    font-weight: 600;
-    font-size: clamp(25px, 18vw, 54px);
-}
-
-.roast-page__card {
-    position: relative;
-    width: 400px;
+/** ---------------- Middle ----------------*/
+.page-middle {
+    width: fit-content;
     max-width: 100%;
     height: fit-content;
-    background: rgb(0, 0, 0);
-    border-radius: 56px;
-    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-.roast-page__card__flags {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    row-gap: 10px;
-    column-gap: 70px;
-    z-index: 2;
-}
-
-.flag {
-    width: 142px;
-    height: 56px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 28px;
-    padding: 0px 25px 0px 8px;
+    padding: 0 var(--s-size-5);
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
+    /** mobile first */
+    gap: var(--s-size-4);
 }
 
-.flag__box-img {
-    height: calc(100% - 16px);
+.page__metric {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: var(--bg-quaternary);
+    border-radius: var(--s-size-8);
+}
+
+.metric__icon {
+    position: absolute;
+    top: var(--s-size-3);
+    left: var(--s-size-3);
+    width: 36px;
     aspect-ratio: 1 / 1;
+    box-sizing: border-box;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: gray;
 }
 
-#flag-roasts {
-    transform: rotate(-10deg);
+#roast-icon {
+    background: #FF3030;
 }
 
-#flag-roasts div {
-    background: #ff3a3a;
-}
-
-#flag-reactions {
-    transform: rotate(10deg);
-}
-
-#flag-reactions div {
+#reaction-icon {
     background: #842EFF;
 }
 
-#flag-forwards {
-    transform: rotate(3deg);
-}
-
-#flag-forwards div {
+#forward-icon {
     background: #FF1F8F;
 }
 
-.flag__box-img img {
-    width: 70%;
-}
-
-.flag__box__text {
+.metric__text {
+    position: absolute;
+    bottom: var(--s-size-5);
+    right: var(--s-size-5);
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    line-height: 120%;
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: var(--s-size-0);
 }
 
-.flag__box__text-top {
-    font-weight: 600;
-    font-size: 22px;
+.metric__text-main {
+    color: var(--text-primary);
+    font-weight: 800;
+    font-size: var(--r-size-5);
 }
 
-.flag__box__text-bottom {
+.metric__text-secondary {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: var(--r-size-4);
+}
+
+/** ---------------- Bottom ----------------*/
+.page-bottom {
+    width: 100%;
+    background: var(--bg-secondary);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-size-5);
+    /** mobile first */
+    height: 350px;
+    padding: var(--s-size-6) var(--s-size-6);
+    border-radius: var(--s-size-9) var(--s-size-9) 0 0;
+    justify-content: start;
+}
+
+.roast__detail {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /** mobile first */
+    width: 100%;
+}
+
+.detail-text {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: var(--text-primary);
     font-weight: 500;
-    font-size: 16px;
+    /** mobile first */
+    font-size: var(--r-size-6);
+    display: flex;
+    flex-direction: column;
 }
 
-img.roast-page__card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+.detail-link {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: var(--text-link);
+    font-weight: 300;
+    /** mobile first */
+    font-size: var(--r-size-4);
+    display: flex;
+    flex-direction: column;
+}
+
+.roast__sample {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /** mobile first */
     width: 100%;
+    gap: var(--s-size-4);
+}
+
+.sample__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--s-size-8);
+    /** mobile first */
+    aspect-ratio: 1 / 1;
+    min-height: 120px;
+    overflow: hidden;
+}
+
+.sample__card img {
     height: 100%;
-    min-height: calc(100%);
-    filter: brightness(0.2);
     object-fit: cover;
-    pointer-events: none;
-    z-index: 1;
+    display: block;
 }
 
-img.roast-page__card-cat {
-    width: 100%;
-    height: auto;
-    z-index: 2;
+/** ======================================== */
+/** ======================================== */
+@media (min-width: 540px) {
+    .roast__detail {
+        max-width: 800px;
+    }
+
+    .roast__sample {
+        max-width: 800px;
+    }
+
+    .sample__card {
+        aspect-ratio: none;
+        width: 100%;
+        max-height: 150px;
+    }
 }
 
-.roast-page-card-shadow {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(to bottom, transparent, #000);
-    pointer-events: none;
-    z-index: 3;
+/** ======================================== */
+/** ======================================== */
+@media (min-width: 670px) {
+    .page-bottom {
+        height: 320px;
+    }
+
+    .detail-text {
+        display: flex;
+        flex-direction: row;
+        gap: var(--s-size-3);
+    }
+}
+
+/** ======================================== */
+/** ======================================== */
+
+@media (min-width: 1312px) {
+    .page-top {
+        gap: var(--s-size-7);
+    }
+
+    .page__title {
+        font-weight: 500;
+        font-size: var(--r-size-15);
+    }
+
+    .page-middle {
+        gap: var(--s-size-5);
+    }
 }
 </style>

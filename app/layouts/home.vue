@@ -33,16 +33,18 @@
     height: calc(100dvh - 35px);
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 20px;
     box-sizing: border-box;
     transition: height 0.3s ease;
+    /** mobile first */
+    gap: var(--s-size-10);
 }
 
 /* ---------------- Nav ---------------- */
 .home-navigation {
     width: 100%;
-    height: 40px;
+    height: fit-content;
+    padding: var(--s-size-5) var(--s-size-5) 0 var(--s-size-5);
+    box-sizing: border-box;
 }
 
 .home-navigation__list {
@@ -54,7 +56,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: var(--s-size-3);
 }
 
 .home-navigation__list-right {
@@ -66,20 +68,18 @@
 a {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 0 20px;
-    height: 44px;
+    gap: var(--s-size-1);
+    padding: var(--s-size-2) var(--s-size-4);
     width: fit-content;
-    border-radius: 26px;
+    border-radius: var(--s-size-6);
     box-sizing: border-box;
     text-decoration: none;
-    background: #1E1E20;
-    /* inactive default */
+    background: var(--bg-tertiary);
     transition: background 0.15s ease;
 }
 
 a.router-link-active {
-    background: #F5F5F7;
+    background: var(--bg-primary);
 }
 
 a h2 {
@@ -87,18 +87,16 @@ a h2 {
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Text", "SF Pro Icons", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 600;
-    font-size: 17px;
-    line-height: 1.2353641176;
-    letter-spacing: -0.022em;
+    font-size: var(--s-size-4);
     transition: color 0.15s ease;
 }
 
 a.router-link-active h2 {
-    color: #000;
+    color: var(--text-active);
 }
 
 a:not(.router-link-active) h2 {
-    color: #F5F5F7;
+    color: var(--text-primary);
 }
 
 a.router-link-active img {
@@ -107,22 +105,28 @@ a.router-link-active img {
 }
 
 a img {
-    width: 26px;
-    height: 26px;
+    width: var(--s-size-6);
+    aspect-ratio: 1 / 1;
     transition: filter 0.15s ease;
 }
 
-/* Special case: leaderboard icon-only box */
 .home-navigation__list-right a {
-    width: 44px;
-    padding: 0;
-    border-radius: 12px;
-    justify-content: center;
+    padding: var(--s-size-2);
+    border-radius: var(--s-size-3);
 }
 
 /* ---------------- Main ---------------- */
 .home-main {
     width: 100%;
     height: 100%;
+}
+
+/** ======================================== */
+/** ======================================== */
+
+@media (min-width: 1312px) {
+    .layout-home {
+        gap: var(--s-size-4);
+    }
 }
 </style>
