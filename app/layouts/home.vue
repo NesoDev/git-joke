@@ -36,7 +36,7 @@
     box-sizing: border-box;
     transition: height 0.3s ease;
     /** mobile first */
-    gap: var(--s-size-10);
+    gap: var(--s-size-8);
 }
 
 /* ---------------- Nav ---------------- */

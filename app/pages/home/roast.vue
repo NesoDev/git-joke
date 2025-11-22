@@ -50,7 +50,10 @@ increase()
     <NuxtLayout name="home">
         <div class="roast-page">
             <div class="page-top">
-                <p class="page__title">Roast your Github profile</p>
+                <p class="page__title">
+                    <span>Roast your </span>
+                    <span>Github profile</span>
+                </p>
                 <InputRoast />
             </div>
             <div class="page-middle">
@@ -146,7 +149,8 @@ increase()
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: var(--text-primary);
     /** mobile first */
-    font-size: var(--r-size-11);
+    font-weight: 600;
+    font-size: var(--r-size-9);
 }
 
 /** ---------------- Middle ----------------*/
@@ -232,7 +236,7 @@ increase()
     align-items: center;
     gap: var(--s-size-5);
     /** mobile first */
-    height: 350px;
+    height: 300px;
     padding: var(--s-size-6) var(--s-size-6);
     border-radius: var(--s-size-9) var(--s-size-9) 0 0;
     justify-content: start;
@@ -289,7 +293,7 @@ increase()
     background: var(--bg-load);
     /** mobile first */
     aspect-ratio: 1 / 1;
-    min-height: 120px;
+    min-height: 100px;
     overflow: hidden;
 }
 
