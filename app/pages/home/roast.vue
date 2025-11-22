@@ -185,8 +185,8 @@ increase()
     /** mobile first */
     width: fit-content;
     height: 120px;
-    gap: clamp(var(--s-size-5), var(--s-size-5), var(--s-size-6));
-    justify-content: space-between;
+    gap: clamp(var(--s-size-3), 4vw, var(--s-size-6));
+    justify-content: flex-start;
 }
 
 .metric-card {
@@ -231,9 +231,6 @@ increase()
         font-size: var(--r-size-13);
     }
 
-    .page-bottom {
-        gap: var(--s-size-8);
-    }
 
     .page__metrics {
         height: 140px;
