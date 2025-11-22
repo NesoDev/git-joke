@@ -93,7 +93,7 @@ increase()
                 <div class="roast__sample">
                     <div class="sample__card">
                         <video autoplay loop muted playsinline class="sample-video">
-                            <source src="/media/ball_light.webm" type="video/webm">
+                            <source src="/media/ball.webm" type="video/webm">
                             <source src="/media/ball.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -327,6 +327,11 @@ increase()
         display: flex;
         flex-direction: row;
         gap: var(--s-size-3);
+    }
+
+    .detail-link {
+        display: flex;
+        flex-direction: row;
     }
 }
 
