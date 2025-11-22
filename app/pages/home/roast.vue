@@ -208,11 +208,15 @@ increase()
     /** mobiel first */
     top: 12px;
     left: 12px;
-    height: var(--s-size-9);
+    height: var(--s-size-8);
     width: auto;
     aspect-ratio: 1 / 1;
     background: var(--bg-tertiary);
+}
 
+.metric-card__icon img {
+    /** mobiel first */
+    height: var(--s-size-5);
 }
 
 /** ========================================= */
