@@ -182,7 +182,7 @@ increase()
     flex-direction: row;
     justify-content: center;
     /** mobile first */
-    height: 120px;
+    height: 100px;
     gap: var(--s-size-4);
 }
 
