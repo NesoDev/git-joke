@@ -21,20 +21,9 @@
                     </a>
                 </div>
             </div>
-            <div class="app-footer__copyright">
-                <h4 class="app-footer__copyright__text">Copyright &copy; {{ getYear() }} | GitJoke. All rights reserved.
-                </h4>
-            </div>
         </footer>
     </div>
 </template>
-
-<script lang="ts" setup>
-const getYear = () => {
-    const d = new Date()
-    return d.getFullYear()
-}
-</script>
 
 <style scoped>
 /** ---------------- General ----------------*/
@@ -92,15 +81,17 @@ h1 {
 }
 
 .app-footer__metadata {
-    position: absolute;
-    top: -80px;
+    position: relative;
     width: 100%;
-    height: 80px;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0px var(--s-size-5);
+    box-sizing: border-box;
     gap: var(--s-size-2);
+    border-top: 1px solid var(--border-tertiary);
 }
 
 .app-footer__metadata:hover .app-footer__author {
@@ -131,34 +122,5 @@ h1 {
 
 .app-footer__socials a img:hover {
     filter: brightness(0) invert(1);
-}
-
-.app-footer__copyright {
-    position: relative;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.app-footer__copyright::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--border-tertiary);
-    pointer-events: none;
-}
-
-.app-footer__copyright__text {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont,
-        "SF Pro Display", "SF Pro Text", "Inter",
-        "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: var(--r-size-4);
-    color: var(--text-secondary);
 }
 </style>

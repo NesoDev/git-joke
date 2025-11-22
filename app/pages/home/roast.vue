@@ -246,7 +246,7 @@ increase()
     gap: var(--s-size-5);
     /** mobile first */
     height: fit-content;
-    padding: var(--s-size-6) var(--s-size-6) 80px var(--s-size-6);
+    padding: var(--s-size-6) var(--s-size-6) var(--s-size-5) var(--s-size-6);
     box-sizing: border-box;
     border-radius: var(--s-size-9) var(--s-size-9) 0 0;
     justify-content: start;
@@ -287,7 +287,7 @@ increase()
 }
 
 .roast__sample {
-    height: calc(100% - 80px);
+    height: calc(100%);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /** mobile first */
@@ -310,7 +310,7 @@ increase()
 
     /** mobile first */
     height: 1;
-    max-height: 120px;
+    min-height: 150px;
     overflow: hidden;
 }
 
