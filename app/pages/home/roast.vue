@@ -286,10 +286,41 @@ increase()
     justify-content: center;
     align-items: center;
     border-radius: var(--s-size-8);
+    background: var(--bg-load);
     /** mobile first */
     aspect-ratio: 1 / 1;
     min-height: 120px;
     overflow: hidden;
+}
+
+.sample__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--s-size-8);
+
+    background: linear-gradient(
+        90deg,
+        var(--bg-quaternary) 25%,
+        rgba(255, 255, 255, 0.03) 50%,
+        var(--bg-quaternary) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+
+    /** mobile first */
+    aspect-ratio: 1 / 1;
+    min-height: 120px;
+    overflow: hidden;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .sample__card video {
