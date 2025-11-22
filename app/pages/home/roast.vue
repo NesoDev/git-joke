@@ -181,7 +181,7 @@ increase()
     display: flex;
     flex-direction: row;
     /** mobile first */
-    height: 100px;
+    height: 120px;
     justify-content: space-between;
 }
 
