@@ -119,6 +119,7 @@ h1 {
 }
 
 .app-footer__socials {
+    height: 19px;
     display: flex;
     flex-direction: row;
     gap: var(--s-size-3);
