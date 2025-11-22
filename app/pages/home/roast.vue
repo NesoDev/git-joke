@@ -309,9 +309,7 @@ increase()
     animation: shimmer 1.5s infinite;
 
     /** mobile first */
-    height: 1;
-    min-height: 150px;
-    max-height: 180px;
+    height: 120px;
     overflow: hidden;
 }
 
