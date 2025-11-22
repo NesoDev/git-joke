@@ -184,7 +184,7 @@ increase()
     flex-direction: row;
     /** mobile first */
     width: fit-content;
-    height: 120px;
+    height: 100px;
     gap: clamp(var(--s-size-3), 4vw, var(--s-size-6));
     justify-content: flex-start;
 }
