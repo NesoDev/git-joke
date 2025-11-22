@@ -58,7 +58,7 @@ increase()
                     <div id="roast-icon" class="metric__icon"><img src="/icons/ic_fire.svg" alt=""></div>
                     <p class="metric__text">
                         <span class="metric__text-main">{{ `${stats.roasts < 10 ? "" : "+ "}${metrics.roasts.counter}`
-                                }}</span>
+                        }}</span>
                                 <span class="metric__text-secondary">roasts</span>
                     </p>
                 </div>
@@ -92,13 +92,22 @@ increase()
                 </div>
                 <div class="roast__sample">
                     <div class="sample__card">
-                        <img src="/media/ball.gif" alt="">
+                        <video autoplay loop muted playsinline class="sample-video">
+                            <source src="/media/ball_light.webm" type="video/webm">
+                            <source src="/media/ball.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="sample__card">
-                        <img src="/media/kaleidoscope.gif" alt="">
+                        <video autoplay loop muted playsinline class="sample-video">
+                            <source src="/media/kaleidoscope.webm" type="video/webm">
+                            <source src="/media/kaleidoscope.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="sample__card">
-                        <img src="/media/fluid.gif" alt="">
+                        <video autoplay loop muted playsinline class="sample-video">
+                            <source src="/media/fluid.webm" type="video/webm">
+                            <source src="/media/fluid.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -283,7 +292,7 @@ increase()
     overflow: hidden;
 }
 
-.sample__card img {
+.sample__card video {
     height: 100%;
     object-fit: cover;
     display: block;
