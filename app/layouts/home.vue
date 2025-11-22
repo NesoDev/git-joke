@@ -30,7 +30,7 @@
 /* ---------------- General ---------------- */
 .layout-home {
     width: 100%;
-    height: calc(100dvh - 35px);
+    height: calc(100svh - 35px);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
