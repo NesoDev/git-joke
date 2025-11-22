@@ -240,14 +240,14 @@ increase()
 .page-bottom {
     width: 100%;
     background: var(--bg-secondary);
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--s-size-5);
     /** mobile first */
-    height: 300px;
-    padding: var(--s-size-6) var(--s-size-6) 0 var(--s-size-6);
+    height: fit-content;
+    padding: var(--s-size-6) var(--s-size-6) 80px var(--s-size-6);
+    box-sizing: border-box;
     border-radius: var(--s-size-9) var(--s-size-9) 0 0;
     justify-content: start;
 }
@@ -287,11 +287,12 @@ increase()
 }
 
 .roast__sample {
-    height: fit-content;
+    height: calc(100% - 80px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /** mobile first */
     width: 100%;
+    background: gray;
     gap: var(--s-size-4);
 }
 
@@ -310,7 +311,7 @@ increase()
 
     /** mobile first */
     aspect-ratio: 1 / 1;
-    min-height: 100px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -332,7 +333,26 @@ increase()
 
 /** ======================================== */
 /** ======================================== */
-@media (min-width: 469px) {
+@media (min-width: 420px) {
+
+    .roast__detail {
+        max-width: 800px;
+    }
+
+    .roast__sample {
+        max-width: 800px;
+    }
+
+    .detail-text {
+        font-weight: 500;
+        font-size: var(--r-size-6);
+    }
+}
+
+/** ======================================== */
+/** ======================================== */
+@media (min-width: 660px) {
+
     .page__title {
         flex-direction: row;
         gap: var(--s-size-1);
@@ -370,34 +390,6 @@ increase()
         font-size: var(--r-size-6);
     }
 
-    .roast__detail {
-        max-width: 800px;
-    }
-
-    .roast__sample {
-        max-width: 800px;
-    }
-
-    .sample__card {
-        aspect-ratio: none;
-        width: 100%;
-        max-height: 130px;
-    }
-
-    .detail-text {
-        font-weight: 500;
-        font-size: var(--r-size-6);
-    }
-
-    .detail-link {
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-/** ======================================== */
-/** ======================================== */
-@media (min-width: 670px) {
     .page-bottom {
         height: 320px;
     }
@@ -408,9 +400,19 @@ increase()
         gap: var(--s-size-3);
     }
 
+    .detail-link {
+        display: flex;
+        flex-direction: row;
+    }
+
 
     .sample__card {
+        aspect-ratio: auto;
         max-height: 150px;
+    }
+
+    .sample__card video {
+        width: 100%;
     }
 }
 
