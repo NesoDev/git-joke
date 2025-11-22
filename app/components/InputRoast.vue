@@ -30,7 +30,7 @@ input {
   font-family: -apple-system, BlinkMacSystemFont,
     "SF Pro Display", "SF Pro Text", "Inter",
     "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: var(--r-size-5);
   color: var(--text-primary);
   box-sizing: border-box;

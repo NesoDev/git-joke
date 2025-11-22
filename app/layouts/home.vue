@@ -30,7 +30,7 @@
 /* ---------------- General ---------------- */
 .layout-home {
     width: 100%;
-    height: calc(100svh - 35px);
+    height: calc(100dvh - 35px);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -74,7 +74,7 @@ a {
     border-radius: var(--s-size-6);
     box-sizing: border-box;
     text-decoration: none;
-    background: var(--bg-tertiary);
+    background: var(--bg-quaternary);
     transition: background 0.15s ease;
 }
 

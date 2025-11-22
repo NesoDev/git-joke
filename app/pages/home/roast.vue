@@ -4,7 +4,7 @@ import InputRoast from '~/components/InputRoast.vue';
 const metrics = reactive({
     roasts: { num: 509, counter: 0 },
     reactions: { num: 108, counter: 0 },
-    forwards: { num: 58, counter: 0 },
+    forwards: { num: 600, counter: 0 },
 })
 
 const stats = computed(() => {
@@ -59,37 +59,31 @@ increase()
                 <div class="page__metrics">
                     <div id="roasts-metric" class="metric-card">
                         <div id="roast-icon" class="metric-card__icon"><img src="/icons/ic_fire.svg" alt=""></div>
-                        <!--
-                        <p class="metric__text">
-                            <span class="metric__text-main">{{ `${stats.roasts < 10 ? "" : "+ "
+                        <p class="metric-card__text">
+                            <span class="metric-card__text-main">{{ `${stats.roasts < 10 ? "" : "+ "
                                 }${metrics.roasts.counter}` }}</span>
-                                    <span class="metric__text-secondary">roasts</span>
+                                    <span class="metric-card__text-secondary">roasts</span>
                         </p>
-                        -->
                     </div>
                     <div id="roasts-metric" class="metric-card">
                         <div id="reaction-icon" class="metric-card__icon"><img src="/icons/ic_smile.svg" alt=""></div>
-                        <!--
-                        <p class="metric__text">
-                            <span class="metric__text-main">{{ `${stats.reactions < 10 ? "" : "+ "
+                        <p class="metric-card__text">
+                            <span class="metric-card__text-main">{{ `${stats.reactions < 10 ? "" : "+ "
                                 }${metrics.reactions.counter}` }}</span>
-                                    <span class="metric__text-secondary">reactions</span>
+                                    <span class="metric-card__text-secondary">reactions</span>
                         </p>
-                        -->
                     </div>
                     <div id="roasts-metric" class="metric-card">
                         <div id="forward-icon" class="metric-card__icon"><img src="/icons/ic_asterisk.svg" alt=""></div>
-                        <!--
-                        <p class="metric__text">
-                            <span class="metric__text-main">{{ `${stats.forwards < 10 ? "" : "+ "
+                        <p class="metric-card__text">
+                            <span class="metric-card__text-main">{{ `${stats.forwards < 10 ? "" : "+ "
                                 }${metrics.forwards.counter}` }}</span>
-                                    <span class="metric__text-secondary">forwards</span>
+                                    <span class="metric-card__text-secondary">forwards</span>
                         </p>
-                        -->
                     </div>
                 </div>
-                <!--
                 <div class="page__details">
+                    <!--
                     <div class="details__text">
                         <p class="details__text-main">
                             <span>Brutally honest.</span>
@@ -120,8 +114,9 @@ increase()
                             </video>
                         </div>
                     </div>
-                </div>
+
                 -->
+                </div>
             </div>
         </div>
     </NuxtLayout>
@@ -161,9 +156,9 @@ increase()
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: var(--text-primary);
     /** mobile first */
-    width: 13ch;
-    font-weight: 600;
-    font-size: var(--r-size-10);
+    width: 12ch;
+    font-weight: 700;
+    font-size: var(--r-size-9);
 }
 
 /** ---------------- Bottom ----------------*/
@@ -174,7 +169,7 @@ increase()
     flex-direction: column;
     align-items: center;
     /** mobile first */
-    gap: var(--s-size-5);
+    gap: var(--s-size-10);
 }
 
 .page__metrics {
@@ -183,10 +178,10 @@ increase()
     display: flex;
     flex-direction: row;
     /** mobile first */
-    width: fit-content;
-    height: 100px;
+    width: 100%;
+    height: clamp(95px, 35%, 140px);
     gap: clamp(var(--s-size-3), 4vw, var(--s-size-6));
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .metric-card {
@@ -196,27 +191,71 @@ increase()
     aspect-ratio: 1 / 1;
     background: var(--bg-secondary);
     /** mobiel first */
-    border-radius: var(--s-size-8);
+    border-radius: var(--s-size-6);
 }
 
 .metric-card__icon {
     position: absolute;
     border-radius: 50%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    background: var(--bg-tertiary);
     display: flex;
     justify-content: center;
     align-items: center;
     /** mobiel first */
-    top: 12px;
-    left: 12px;
-    height: var(--s-size-8);
-    width: auto;
-    aspect-ratio: 1 / 1;
-    background: var(--bg-tertiary);
+    top: var(--s-size-2);
+    left: var(--s-size-2);
+    height: var(--s-size-7);
+}
+
+#roast-icon {
+    background: #ff0000;
+}
+#reaction-icon {
+    background: #1356ff;
+}
+#forward-icon {
+    background: #ff1f5f;
 }
 
 .metric-card__icon img {
-    /** mobiel first */
-    height: var(--s-size-5);
+    /** mobile first */
+    height: var(--s-size-4);
+}
+
+.metric-card__text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    /** mobile first */
+    bottom: var(--s-size-4);
+    right: var(--s-size-4);
+    gap: 0;
+}
+
+.metric-card__text-main {
+    color: var(--text-primary);
+    /** mobile first */
+    font-weight: 700;
+    font-size: var(--r-size-5);
+}
+
+.metric-card__text-secondary {
+    color: var(--text-secondary);
+    /** mobile first */
+    font-weight: 400;
+    font-size: var(--r-size-4);
+}
+
+.page__details {
+    width: 100%;
+    height: 100%;
+    background: rgb(63, 63, 63);
 }
 
 /** ========================================= */
@@ -235,10 +274,38 @@ increase()
         font-size: var(--r-size-13);
     }
 
-
     .page__metrics {
-        height: 140px;
+        height: 40%;
         gap: var(--s-size-5);
+    }
+
+    .metric-card {
+        border-radius: var(--s-size-9);
+    }
+
+    .metric-card__icon {
+        top: var(--s-size-4);
+        left: var(--s-size-4);
+        height: var(--s-size-9);
+    }
+
+    .metric-card__icon img {
+        height: var(--s-size-6);
+    }
+
+    .metric-card__text {
+        bottom: var(--s-size-6);
+        right: var(--s-size-6);
+    }
+
+    .metric-card__text-main {
+        font-weight: 600;
+        font-size: var(--r-size-6);
+    }
+
+    .metric-card__text-secondary {
+        font-weight: 400;
+        font-size: var(--r-size-5);
     }
 }
 </style>

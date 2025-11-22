@@ -46,12 +46,12 @@
   --bg-surface: #000;
   --bg-primary: #f5f5f7;
   --bg-secondary: #0e0e0e;
-  --bg-tertiary: #1e1e20;
+  --bg-tertiary: #333336;
   --bg-quaternary: #111;
 
   /* ----- Text ----- */
   --text-primary: #f5f5f7;
-  --text-secondary: #939393;
+  --text-secondary: #545454;
   --text-active: #000;
   --text-inactive: #888888;
   --text-link: #2897ff;
