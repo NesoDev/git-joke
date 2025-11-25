@@ -180,7 +180,7 @@ increase()
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--s-size-4);
+    gap: 5%;
     /** mobile first */
     width: 100%;
     max-width: 500px;
@@ -193,8 +193,8 @@ increase()
     aspect-ratio: 1 / 1;
     background: var(--bg-secondary);
     outline: 1px solid #1d1d1f;
-    /** mobiel first */
-    border-radius: var(--s-size-8);
+    /** mobile first */
+    border-radius: 30%;
 }
 
 .metric-card__icon {
@@ -206,10 +206,10 @@ increase()
     display: flex;
     justify-content: center;
     align-items: center;
-    /** mobiel first */
-    top: var(--s-size-3);
-    left: var(--s-size-3);
-    height: var(--s-size-7);
+    /** mobile first */
+    top: 12%;
+    left: 12%;
+    height: 30%;
 }
 
 #roast-icon {
@@ -226,7 +226,7 @@ increase()
 
 .metric-card__icon img {
     /** mobile first */
-    height: var(--s-size-4);
+    height: 60%;
 }
 
 .metric-card__text {
@@ -238,23 +238,23 @@ increase()
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     /** mobile first */
-    bottom: var(--s-size-4);
-    right: var(--s-size-4);
-    line-height: 130%;
+    bottom: 15%;
+    right: 15%;
+    line-height: 5vw;
 }
 
 .metric-card__text-main {
     color: var(--text-primary);
     /** mobile first */
     font-weight: 700;
-    font-size: var(--r-size-6);
+    font-size: 5vw;
 }
 
 .metric-card__text-secondary {
     color: var(--text-secondary);
     /** mobile first */
     font-weight: 500;
-    font-size: var(--r-size-4);
+    font-size: 4vw;
 }
 
 .page__details {
@@ -267,6 +267,8 @@ increase()
     /** mobile first */
     padding: var(--s-size-5);
 }
+
+
 
 /** ========================================= */
 @media (min-width: 688px) {
