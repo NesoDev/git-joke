@@ -178,13 +178,11 @@ increase()
 .page__metrics {
     padding: 0px var(--s-size-5);
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-size-4);
     /** mobile first */
     width: 100%;
-    height: clamp(95px, 35%, 150px);
-    gap: clamp(var(--s-size-3), 4vw, var(--s-size-6));
-    justify-content: center;
 }
 
 .metric-card {
@@ -193,8 +191,9 @@ increase()
     width: auto;
     aspect-ratio: 1 / 1;
     background: var(--bg-secondary);
+    outline: 1px solid #1D1D1F;
     /** mobiel first */
-    border-radius: var(--s-size-6);
+    border-radius: var(--s-size-8);
 }
 
 .metric-card__icon {
@@ -207,9 +206,9 @@ increase()
     justify-content: center;
     align-items: center;
     /** mobiel first */
-    top: var(--s-size-2);
-    left: var(--s-size-2);
-    height: var(--s-size-7);
+    top: var(--s-size-3);
+    left: var(--s-size-3);
+    height: var(--s-size-8);
 }
 
 #roast-icon {
@@ -226,7 +225,7 @@ increase()
 
 .metric-card__icon img {
     /** mobile first */
-    height: var(--s-size-4);
+    height: var(--s-size-5);
 }
 
 .metric-card__text {
@@ -238,29 +237,29 @@ increase()
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     /** mobile first */
-    bottom: var(--s-size-4);
-    right: var(--s-size-4);
-    line-height: 120%;
+    bottom: var(--s-size-5);
+    right: var(--s-size-5);
+    line-height: 130%;
 }
 
 .metric-card__text-main {
     color: var(--text-primary);
     /** mobile first */
     font-weight: 700;
-    font-size: var(--r-size-5);
+    font-size: var(--r-size-6);
 }
 
 .metric-card__text-secondary {
     color: var(--text-secondary);
     /** mobile first */
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--r-size-4);
 }
 
 .page__details {
     width: 100%;
     height: 100%;
-    background: rgb(63, 63, 63);
+    background: #0E0E0E;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,8 +284,7 @@ increase()
     }
 
     .page__metrics {
-        height: 40%;
-        gap: var(--s-size-5);
+        width: 35%;
     }
 
     .metric-card {

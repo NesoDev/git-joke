@@ -16,9 +16,8 @@
   width: 400px;
   max-width: 100%;
   height: 65px;
-  background: var(--bg-secondary);
+  background: #1D1D1F;
   border-radius: 32.5px;
-  border: 1px solid var(--border-secondary);
 }
 
 input {
@@ -57,7 +56,7 @@ button {
   aspect-ratio: 1 / 1;
   height: calc(100% - 20px);
   border-radius: 100%;
-  background: var(--bg-primary);
+  background: #49494B;
   display: flex;
   justify-content: center;
   align-items: center;
