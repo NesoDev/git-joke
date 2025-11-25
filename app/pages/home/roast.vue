@@ -238,8 +238,8 @@ increase()
     font-family: -apple-system, BlinkMacSystemFont,
         "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     /** mobile first */
-    bottom: var(--s-size-5);
-    right: var(--s-size-5);
+    bottom: var(--s-size-4);
+    right: var(--s-size-4);
     line-height: 130%;
 }
 
