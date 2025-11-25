@@ -83,8 +83,8 @@ increase()
                     </div>
                 </div>
                 <div class="page__details">
-                    <!--
                     <div class="details__text">
+                        <!--
                         <p class="details__text-main">
                             <span>Brutally honest.</span>
                             <span>Visually stunning.</span>
@@ -93,7 +93,10 @@ increase()
                             <span>View roasts of</span>
                             <span>other users ></span>
                         </NuxtLink>
+                        -->
                     </div>
+
+                    <!--
                     <div class="details__card">
                         <div class="details__card-sample">
                             <video autoplay loop muted playsinline class="sample-video">
@@ -179,7 +182,7 @@ increase()
     flex-direction: row;
     /** mobile first */
     width: 100%;
-    height: clamp(95px, 35%, 140px);
+    height: clamp(95px, 35%, 150px);
     gap: clamp(var(--s-size-3), 4vw, var(--s-size-6));
     justify-content: center;
 }
@@ -212,9 +215,11 @@ increase()
 #roast-icon {
     background: #ff0000;
 }
+
 #reaction-icon {
     background: #1356ff;
 }
+
 #forward-icon {
     background: #ff1f5f;
 }
@@ -235,7 +240,7 @@ increase()
     /** mobile first */
     bottom: var(--s-size-4);
     right: var(--s-size-4);
-    gap: 0;
+    line-height: 120%;
 }
 
 .metric-card__text-main {
@@ -256,6 +261,11 @@ increase()
     width: 100%;
     height: 100%;
     background: rgb(63, 63, 63);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /** mobile first */
+    padding: var(--s-size-5);
 }
 
 /** ========================================= */
@@ -271,7 +281,7 @@ increase()
     .page__title {
         width: 100%;
         font-weight: 600;
-        font-size: var(--r-size-13);
+        font-size: var(--r-size-15);
     }
 
     .page__metrics {
@@ -294,13 +304,13 @@ increase()
     }
 
     .metric-card__text {
-        bottom: var(--s-size-6);
-        right: var(--s-size-6);
+        bottom: var(--s-size-5);
+        right: var(--s-size-5);
     }
 
     .metric-card__text-main {
         font-weight: 600;
-        font-size: var(--r-size-6);
+        font-size: var(--r-size-7);
     }
 
     .metric-card__text-secondary {
