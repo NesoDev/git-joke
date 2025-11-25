@@ -209,7 +209,7 @@ increase()
     /** mobiel first */
     top: var(--s-size-3);
     left: var(--s-size-3);
-    height: var(--s-size-8);
+    height: var(--s-size-7);
 }
 
 #roast-icon {
@@ -226,7 +226,7 @@ increase()
 
 .metric-card__icon img {
     /** mobile first */
-    height: var(--s-size-5);
+    height: var(--s-size-4);
 }
 
 .metric-card__text {
