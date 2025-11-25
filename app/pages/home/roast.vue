@@ -183,6 +183,7 @@ increase()
     gap: var(--s-size-4);
     /** mobile first */
     width: 100%;
+    max-width: 500px;
 }
 
 .metric-card {
@@ -191,7 +192,7 @@ increase()
     width: auto;
     aspect-ratio: 1 / 1;
     background: var(--bg-secondary);
-    outline: 1px solid #1D1D1F;
+    outline: 1px solid #1d1d1f;
     /** mobiel first */
     border-radius: var(--s-size-8);
 }
@@ -284,7 +285,7 @@ increase()
     }
 
     .page__metrics {
-        width: 35%;
+        max-width: 500px;
     }
 
     .metric-card {
@@ -304,6 +305,7 @@ increase()
     .metric-card__text {
         bottom: var(--s-size-5);
         right: var(--s-size-5);
+        line-height: 170%;
     }
 
     .metric-card__text-main {

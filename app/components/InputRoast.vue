@@ -16,7 +16,8 @@
   width: 400px;
   max-width: 100%;
   height: 65px;
-  background: #1D1D1F;
+  background: #000000;
+  outline: 1px solid #1D1D1F;
   border-radius: 32.5px;
 }
 
@@ -56,7 +57,7 @@ button {
   aspect-ratio: 1 / 1;
   height: calc(100% - 20px);
   border-radius: 100%;
-  background: #49494B;
+  background: var(--bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
