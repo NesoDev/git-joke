@@ -84,41 +84,34 @@ increase()
                 </div>
                 <div class="page__details">
                     <div class="details__text">
-                        <!--
                         <p class="details__text-main">
-                            <span>Brutally honest.</span>
-                            <span>Visually stunning.</span>
+                            Brutally honest. Visually stunning.
                         </p>
                         <NuxtLink class="details__text-link" to="/home/leaderboard">
-                            <span>View roasts of</span>
-                            <span>other users ></span>
+                            View roasts of other users
                         </NuxtLink>
-                        -->
                     </div>
 
-                    <!--
                     <div class="details__card">
-                        <div class="details__card-sample">
+                        <div class="details__card-media">
                             <video autoplay loop muted playsinline class="sample-video">
                                 <source src="/media/ball.webm" type="video/webm">
                                 <source src="/media/ball.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <div class="details__card-sample">
+                        <div class="details__card-media">
                             <video autoplay loop muted playsinline class="sample-video">
                                 <source src="/media/kaleidoscope.webm" type="video/webm">
                                 <source src="/media/kaleidoscope.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <div class="details__card-sample">
+                        <div class="details__card-media">
                             <video autoplay loop muted playsinline class="sample-video">
                                 <source src="/media/fluid.webm" type="video/webm">
                                 <source src="/media/fluid.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
-
-                -->
                 </div>
             </div>
         </div>
@@ -128,13 +121,16 @@ increase()
 <style scoped>
 /** ---------------- Page ----------------*/
 .roast-page {
-    height: 100%;
     width: 100%;
+    height: fit-content;
+    min-height: calc(100dvh - 115px);
+    box-shadow: inset 0 0 1px 1px #00ff77;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
     /** mobile first */
-    gap: var(--s-size-5)
+    gap: 5vh
 }
 
 /** ---------------- Top ----------------*/
@@ -161,13 +157,13 @@ increase()
     /** mobile first */
     width: 12ch;
     font-weight: 700;
-    font-size: var(--r-size-9);
+    font-size: 8vw;
 }
 
 /** ---------------- Bottom ----------------*/
 .page-bottom {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,7 +188,6 @@ increase()
     width: auto;
     aspect-ratio: 1 / 1;
     background: var(--bg-secondary);
-    outline: 1px solid #1d1d1f;
     /** mobile first */
     border-radius: 30%;
 }
@@ -264,16 +259,75 @@ increase()
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     /** mobile first */
-    padding: var(--s-size-5);
+    padding: var(--s-size-8) var(--s-size-5);
+    gap: var(--s-size-6);
 }
 
+.details__text {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    /** mobile first */
+    width: 100%;
+    gap: var(--s-size-5);
+}
 
+.details__text-main {
+    margin: 0;
+    color: var(--text-primary);
+    text-wrap: wrap;
+    /** mobile first */
+    font-weight: 700;
+    font-size: 5vw;
+    width: 20ch;
+}
+
+.details__text-link {
+    text-align: end;
+    text-decoration: none;
+    color: var(--text-link);
+    /** mobile first */
+    font-weight: 200;
+    font-size: 3.5vw;
+}
+
+.details__card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /** mobile first */
+    width: 100%;
+    gap: 4%;
+}
+
+.details__card-media {
+    position: relative;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /** mobile first */
+    border-radius: 25%;
+}
+
+.details__card-media video {
+    background: transparent;
+    height: 100%;
+    object-fit: cover;
+}
 
 /** ========================================= */
 @media (min-width: 688px) {
     .roast-page {
-        gap: var(--s-size-10)
+        gap: 4dvh;
     }
 
     .page-top {
@@ -282,12 +336,17 @@ increase()
 
     .page__title {
         width: 100%;
+        width: 12ch;
         font-weight: 600;
         font-size: var(--r-size-15);
     }
 
+    .page-bottom {
+        gap: 6dvh;
+    }
+
     .page__metrics {
-        max-width: 500px;
+        max-width: 480px;
     }
 
     .metric-card {
@@ -305,8 +364,8 @@ increase()
     }
 
     .metric-card__text {
-        bottom: var(--s-size-5);
-        right: var(--s-size-5);
+        bottom: var(--s-size-4);
+        right: var(--s-size-4);
         line-height: 170%;
     }
 
@@ -317,7 +376,40 @@ increase()
 
     .metric-card__text-secondary {
         font-weight: 400;
-        font-size: var(--r-size-5);
+        font-size: var(--r-size-4);
+    }
+
+    .details__text {
+        max-width: 800px;
+    }
+
+    .details__text-main {
+        width: 24ch;
+        font-size: clamp(var(--r-size-7), 3vw, var(--r-size-7));
+    }
+
+    .details__text-link {
+        font-size: clamp(var(--r-size-4), 1.6vw, var(--r-size-4));
+    }
+
+    .details__card {
+        max-width: 800px;
+        gap: 3%;
+    }
+
+    .details__card-media {
+        aspect-ratio: 3 / 2;
+        border-radius: 30px;
+    }
+
+    .details__card-media video {
+        width: 100%;
+    }
+}
+
+@media (min-width: 689px) and (max-width: 992px) {
+    .page-bottom {
+        gap: 13dvh;
     }
 }
 </style>

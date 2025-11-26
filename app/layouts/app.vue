@@ -30,6 +30,8 @@
 .v-app {
     width: 100dvw;
     height: fit-content;
+    min-height: 100dvh;
+    box-shadow: inset 0 0 1px 1px rgb(255, 242, 0);
     overflow: hidden;
 }
 
@@ -71,6 +73,8 @@ h1 {
 .app-main {
     width: 100%;
     height: fit-content;
+    min-height: calc(100dvh - 105px);
+    box-shadow: inset 0 0 1px 1px white;
 }
 
 /** ---------------- Footer ----------------*/

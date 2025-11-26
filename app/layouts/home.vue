@@ -30,20 +30,20 @@
 /* ---------------- General ---------------- */
 .layout-home {
     width: 100%;
-    height: calc(100dvh - 35px);
+    height: fit-content;
+    min-height: calc(100dvh - 105px);
+    
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     transition: height 0.3s ease;
-    /** mobile first */
-    gap: var(--s-size-7);
 }
 
 /* ---------------- Nav ---------------- */
 .home-navigation {
     width: 100%;
     height: fit-content;
-    padding: var(--s-size-5) var(--s-size-5) 0 var(--s-size-5);
+    padding: var(--s-size-5);
     box-sizing: border-box;
 }
 
@@ -117,16 +117,10 @@ a img {
 
 /* ---------------- Main ---------------- */
 .home-main {
+    position: relative;
     width: 100%;
-    height: 100%;
-}
-
-/** ======================================== */
-/** ======================================== */
-
-@media (min-width: 1312px) {
-    .layout-home {
-        gap: var(--s-size-4);
-    }
+    height: fit-content;
+    min-height: calc(100dvh - 115px);
+    box-shadow: inset 0 0 1px 1px rgb(0, 195, 255);
 }
 </style>
